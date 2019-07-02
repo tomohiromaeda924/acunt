@@ -1,0 +1,40 @@
+<div class="new_top">
+  <h1>転職希望者ページ</h1>
+  <h1 class="hope">希望をご記入下さい。</h1>
+  <div>
+      <% @career_changes.errors.full_messages.each do |message|%>
+      <%= message %>
+      <%end%>
+  </div >
+  <div class="new_order">
+    <%= form_tag("/career_changes/#{@current_user.id}/data")do %>
+    <div class="new_order_hope">
+      <a class="list">職種</a><input type="text" name="syokusyu" class="" placeholder=""></input>
+      <a class="list">年収</a><input type="text" name="nennsyuu" class="" placeholder=""></input>
+      <a class="list">勤務地</a><input type="text" name="kinnmuti" class="" placeholder=""></input>
+      <a class="list">勤務時間</a><input type="text" name="kinnmuzikann" class="" placeholder=""></input>
+      <a class="list">休日</a><input type="text" name="kyuuzitu" class="" placeholder=""></input>
+      <a class="list">残業の可否</a></a><input type="text" name="zanngyou" class="" placeholder=""></input>
+      <a class="list">その他ご希望</a><textarea type="text" name="sonota" class="" placeholder=""></textarea>
+    </div>   
+    <div class="sikaku">  
+      <h1>保有資格</h1>
+        <input id="boki2" type="checkbox" name="boki2" value="簿記2級"><label for="boki2">簿記2級</label>
+        <input id="boki1" type="checkbox" name="boki1" value="簿記1級"><label for="boki1">簿記1級</label><br>
+        <input id="bkaikei2" type="checkbox" name="bkaikei2" value="ビジネス会計検定2級"><label for="bkaikei2">ビジネス会計検定2級</label>
+        <input id="bkaikei1" type="checkbox" name="bkaikei1" value="ビジネス会計検定1級"><label for="bkaikei1">ビジネス会計検定1級</label><br>
+        <input id="zeirisi" type="checkbox" name="zeirisi" value="税理士"><label for="zeirisi">税理士</label>
+        <input id="" type="checkbox" name="bokironn" value="税理士科目合格 簿記論"><label for="">税理士科目合格 簿記論</label>
+        <input id="" type="checkbox" name="zaimusyohyouronn" value="税理士科目合格 財務諸表論"><label for="">税理士科目合格 財務諸表論</label><br>
+        <input id="" type="checkbox" name="houzinnzei" value="税理士科目合格 法人税"><label for="">税理士科目合格 法人税</label>
+        <input id="" type="checkbox" name="syotokuzei" value="税理士科目合格 所得税"><label for="">税理士科目合格 所得税</label>
+        <input id="" type="checkbox" name="syouhizei" value="税理士科目合格 消費税"><label for="">税理士科目合格 消費税</label><br>
+        <input id="" type="checkbox" name="goukakusya" value="公認会計士試験合格者"><label for="">公認会計士試験合格者</label>
+        <input id="kaikeisi" type="checkbox" name="kaikeisi" value="公認会計士"><label for="kaikeisi">公認会計士</label><br>
+      <input type="submit" class="new_order_sousinn" name="" value="送信"></input><br>
+    </div>  
+  
+  <%end%>
+  
+  </div>
+</div>

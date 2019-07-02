@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>会計専門職人材.com</title>
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
+  </head>
+  <body>
+   
+  <!-- header部　-->
+    <header>
+      <h1 id="hoge">会計専門職人材.com</h1>
+    </header>
+
+      <!-- nav部 -->
+      <nav>
+        <ul class="nav-list">
+          <li class="nav-list-item"><%=link_to("ホーム","/")%></li>
+          <!-- <li class="nav-list-item"><%=link_to("会社概要","/our_company/company_profile")%></li>-->
+          <%if @current_user%>
+            <li class="nav-list-item"><%=link_to("転職希望者","/career_changes/#{@current_user.id}/new")%></li>
+            <li class="nav-list-item"><%=link_to("求人希望者（企業）","/job_offers/#{@current_user.id}/new")%></li>
+            <li class="nav-list-item"><%=link_to("会計、監査、税務相談","/tax_consultation/#{@current_user.id}/new")%></li>
+            <li class="nav-list-item"><%=@current_user.name + "さんログイン中"%></li>
+            <li class="nav-list-item"><%=link_to("ログアウト","/users/logout")%></li>
+          <%else%>
+            <li class="nav-list-item"><%=link_to("お問い合わせ","/from_user/first")%></li>
+            <li class="nav-list-item"><%=link_to("新規登録","/users/new")%></li>
+            <li class="nav-list-item"><%=link_to("ログイン","/users/login_form")%></li>
+          <%end%>
+        </ul>
+      </nav>
+  <% if flash[:notice]%>
+  <%= flash[:notice]%>
+  <%end%>
+  <%= yield %>
+  <button class="scroll-top" id="js-button"><i class="fas fa-upload" aria-hidden="true"></i></button>
+  </body>
+</html>

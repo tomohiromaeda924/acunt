@@ -1,0 +1,17 @@
+<div class="login_form_top">
+    <h1>ログインページ</h1>
+    <div>
+        <% @user.errors.full_messages.each do |message|%>
+            <%= message%>
+        <%end%>
+    </div>
+    <div>
+        <%= form_tag("/users/login") do%>
+            <p>メールアドレス</p>
+            <input type="text" name="email" value="<%= @user.email%>">
+            <p>パスワード</p>
+            <input type="password" name="password" value="<%= @user.password%>"><br>
+            <input type="submit" class="login_form_sousinn" value="ログイン">
+        <%end%>
+    </div>
+</div>

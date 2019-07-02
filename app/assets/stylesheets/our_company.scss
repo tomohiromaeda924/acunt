@@ -1,0 +1,35 @@
+// Place all the styles related to the our_company controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+ul {
+  list-style: none;
+}
+
+.our_company{
+    margin-top:50px;
+}
+.company_name{
+    margin:50px 0;
+}
+.company_name, .our_company, .address, .access, .our_company h1{
+    margin-left:30px;
+}
+
+.member_list li{
+    margin-bottom:10px;
+}
+
+.member_list a{
+    display:inline-block;
+   
+}
+
+.position{
+     width:100px;
+     text-align:center;
+     margin-right:20px;
+}
+
+.address p{
+    margin-bottom:30px;
+}

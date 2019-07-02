@@ -1,0 +1,39 @@
+<div class="job_offers_top">
+  
+  <h1>求人希望者（企業）ページ</h1>
+  <h1 class="">求職者の労働条件を記入してください</h1>
+  
+  <div>
+      <% @job_offers.errors.full_messages.each do |message|%>
+      <%= message %>
+      <%end%>
+  </div>
+  <div class="job_offers_order">
+    <%= form_tag("/job_offers/#{@current_user.id}/data")do %>
+        
+          <a>業務内容</a><input type="text" name="gyoumu" class="gyoumu" placeholder="一般事務"></input>
+    
+          <a>契約期間</a><input type="text" name="keiyakukikann" class="keiyaku" placeholder="期間の定めなし"></input>
+        
+          <a>使用期間</a><input type="text" name="siyoukikann" class="" placeholder="使用期間あり(3か月)"></input>
+        
+          <a>就業場所</a><input type="text" name="kinnmuti" class="" placeholder="本社 〇県〇市〇-〇又は支社 〇県〇市〇-〇"></input>
+        
+          <a>就業時間</a><input type="text" name="kinnmuzikann" class="" placeholder="9:00～18:00"></input>
+        
+          <a>休憩時間</a><input type="text" name="kyuukei" class="" placeholder="12:00～13:00"></input>
+        
+          <a>休日</a><input type="text" name="kyuuzitu" class="" placeholder="土日、祝日 年間120日"></input>
+        
+          <a>時間外労働</a><input type="text" name="zikanngai" class="" placeholder="あり(月平均20時間)"></input>
+        
+          <a>賃金</a><textarea type="text" name="tinnginn" class="" placeholder="月給20万円(ただし、試用期間中は月給19万円)"></textarea>
+        
+          <a>加入保険</a><input type="text" name="hokenn" class="" placeholder="雇用保険、労災保険、厚生年金、健康保険"></input>
+        
+          <a>募集者の氏名又は名称</a><input type="text" name="bosyuusya" class="" placeholder="株式会社〇〇"></input>
+         
+    <input type="submit" name="" class="job_offers_order_list_sousinn" value="送信"></input><br>
+  <%end%>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+<div class="tax_consultation_top">
+  <h1>会計、監査、税務相談</h1>
+  <div class="tax_consultation_comment">
+    <p>会計、監査、税務でお困りの事業者様<br>当社は数多くの、公認会計士、税理士とのネットワークを強みとしております。<br>
+    そのネットワークを駆使し、お客様の問題を解決できる人材をご紹介いたします。</p>
+  </div>
+  <div>
+      <% @tax.errors.full_messages.each do |message|%>
+      <%= message %>
+      <%end%>
+  </div>
+  <div>
+    <%= form_tag("/tax_consultation/data")do %>
+      <div>
+        <label for="msg" class="from_user_list_toi">ご相談内容:</label>
+        <textarea id="msg" name="message"></textarea>
+      </div>
+      <button type="submit" class="tax_consultation_sousinn">送信</button>
+    <%end%>
+  </div>
+</div>

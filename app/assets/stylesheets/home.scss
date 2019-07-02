@@ -1,0 +1,101 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+/* reset ================================ */
+* {
+	margin: 0px;
+	padding: 0px;
+	color: #6c6b6b;
+	box-sizing: border-box;
+}
+.claerfix::after{
+	content:"";
+	display: block;
+	clear:both;
+}
+a{
+	text-decoration: none;
+}
+body{
+	font-family: "Yu Gothic","Meiryo","sans-serif";
+}
+header{
+	height: 70px;
+	width: 90%;
+	margin: 0 auto;
+	text-align: center;
+	padding: 15px 0;
+	position: relative;
+}
+header h1{
+	font-size: 32px;
+}
+
+nav{
+  height: 50px;
+	/*line-height: 50px;*/
+  width:100%;
+}
+.nav-list{
+	list-style: none;
+	text-align: center;
+}
+.nav-list-item{
+	display: inline-block;
+	padding: 10px 0;
+	margin: 0 20px;
+}
+
+/* main-visual ================================ */
+
+.main-visual{
+  height:300px;
+  width:100%;
+  background-image: url("/image_123923953 (1).JPG");//url("わからない")
+  background-size: cover;
+  background-position: center;
+
+  }
+.main-visual-content{
+  width :60%;
+  height: 300px;/*100%はダメですか？*/
+  background-color: rgba(0,0,0, 0.5);
+	text-align: center;/*main-visual-contentブロックの中にあるブロックを全て中心に移動させるためですか？？*/
+	padding-top:105px;
+}
+.main-visual-content p{
+  color:#FFFFFF;
+}
+
+
+.main{
+  width:800px;
+  margin: 0 auto;
+	padding:70px 0;
+}
+.main p{
+	font-size: 50px;
+}
+.blog_allBoxs{
+	font: left;
+	display: inline-block;
+}
+.side-right{
+	float:right;
+}
+.right-img {
+	
+	width:450px;
+	height:400px;
+}
+
+footer{
+  background-color: #848282;
+  height: 120px;
+	text-align: center;
+	padding: 50px 0;
+
+}
+.footer-text{
+	color:#FFFFFF;
+}
